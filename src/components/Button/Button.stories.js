@@ -15,7 +15,7 @@ export const WithLongText = (args) => (
 export const Customizable = (args) => <Button {...args}>{args.text}</Button>;
 
 Customizable.args = {
-  text: "",
+  text: "Customizable TEXT PLEASE OPEN THE ADDON IN STORYBOOK",
   bgColor: "",
   textColor: "",
   fontSize: 1.2,
