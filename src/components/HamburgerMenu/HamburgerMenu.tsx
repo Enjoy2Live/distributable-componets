@@ -3,12 +3,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { slide as SlideHamburgerMenu } from "react-burger-menu";
-import style from "./HamburgerMenu.module.css";
+import * as style from "./HamburgerMenu.module.css";
 import logoMonogramImage from "./../../images/logo-monogram.png";
 import Logout from "../../utils/Logout";
 import { env } from "../../utils/EnvironmentVariables";
+import { User } from "../../models/common";
 
-const HamburgerMenu: React.FC = (userData) => {
+const HamburgerMenu: React.FC<{ userData: User }> = ({ userData }) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   // Called when the open/close state of the menu changes (onStateChange callback)

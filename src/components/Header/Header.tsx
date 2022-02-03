@@ -14,32 +14,10 @@ import {
 } from "./StyledHeader";
 
 import HamburgerMenu from "../HamburgerMenu";
+import { User } from "../../models/common";
 
 
-interface HeaderProps {
-  userData: {
-    id: number,
-    name: string,
-    username: string,
-    email: string,
-    bio: string,
-    profilePictureUrl: string,
-    socialMediaLinks: string[],
-    totalPoints: number,
-    totalSeasonPoints: number,
-    availablePoints: number,
-    volunteerHours: number,
-    discord: {
-      id: number,
-      avatar: string,
-      username: string,
-      discriminator: string,
-    }
-  }
-}
-
-
-const Header: React.FC<HeaderProps> = ({ userData }) => {
+const Header: React.FC<{userData: User}> = ({ userData }) => {
   return (
     <HeaderBlock>
       <Logo>
